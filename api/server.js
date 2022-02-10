@@ -11,7 +11,7 @@ server.use(express.json())
 server.use('/api', usersRouter)
 
 server.use('*', (req, res) => {
-    res.send(`<h1>Hello! 😁</h1>`)
+    res.send(`<h1>Hello there! Nice to meet you! 😁</h1>`)
 })
 
 server.use((err, req, res, next) => { // eslint-disable-line
