@@ -12,7 +12,17 @@ router.get('/users', (req, res) => {
     ])
 })
 
-router.post('')
+router.post('/register', (req, res, next) => {
+    const { username } = req.body
+        if (!username) {
+            next({
+                status: 400,
+                message: 'Must provide required name field!'
+            })
+        } else {
+            res.status(201).json(username)
+        }
+})
 
 
 
