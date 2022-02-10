@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/api/users', (req, res) => {
+router.get('/', (req, res) => {
     res.json([
         { id: 1, username: 'Hannah' },
         { id: 2, username: 'Trey' },
@@ -12,7 +12,7 @@ router.get('/api/users', (req, res) => {
     ])
 })
 
-
+router.post('')
 
 
 
