@@ -17,15 +17,23 @@ router.post('/register', (req, res, next) => {
         if (!username) {
             next({
                 status: 400,
-                message: 'Must provide required name field!'
+                message: 'Username required!'
             })
         } else {
             res.status(201).json(username)
         }
 })
 
-
-
-
+router.post('/login', (req, res, next) => {
+    const { username, password } = req.body
+        if (!username || !password) {
+            next({
+                status: 400,
+                message: 'Username AND password required'
+            })
+        } else {
+            res.send(`<h2>Welcome to an AWESOME page! 🥳</h2>`)
+        }
+})
 
 module.exports = router
